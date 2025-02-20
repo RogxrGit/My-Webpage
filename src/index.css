@@ -1,6 +1,6 @@
 :root {
     --primary: #fff;
-    --secondary: #212121;
+    --secondary: #9f9f9f;
 }
 
 * {
@@ -37,19 +37,53 @@
 
 @media (max-width: 768px) {
     #view {
-        align-items: center;
-
         height: 100dvh;
         width: 100dvw;
-    }
 
-    header #profile-pic {
-        width: 100px;
-        height: 100px;
+        && header {
+            align-items: center;
+        }
 
-        border-radius: 100%;
+        && header #cover-pic {
+            width: 100dvw;
+            height: 200px;
 
-        background-image: url("./img/pic.jpeg");
-        background-position: top;
+            position: absolute;
+            top: -100px;
+            z-index: -1;
+
+            background-color: pink;
+
+            border-radius: 100%;
+        }
+
+        header #profile-pic {
+            width: 100px;
+            height: 100px;
+
+            margin-top: 40px;
+    
+            border-radius: 100%;
+    
+            background-image: url("./img/pic.jpeg");
+            background-position: top;
+
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(111, 0, 255, 0.25) 0px 50px 100px -20px, rgb(49, 0, 88) 0px 0px 60px -30px;
+        }  
+
+        header #title {
+            margin: 8px;
+            padding: 4px;
+
+        }
+
+        header #description {
+            color: var(--secondary);
+
+            width: 80%;
+
+            text-align: center;
+        }
+    
     }
 }
