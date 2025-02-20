@@ -1,0 +1,55 @@
+:root {
+    --primary: #fff;
+    --secondary: #212121;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/* Tags ===========*/
+
+
+/* Classes ===========*/
+
+.container-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+/* ID's ===========*/
+
+@media (max-width: 768px) {
+    #view {
+        align-items: center;
+
+        height: 100dvh;
+        width: 100dvw;
+    }
+
+    header #profile-pic {
+        width: 100px;
+        height: 100px;
+
+        border-radius: 100%;
+
+        background-image: url("./img/pic.jpeg");
+        background-position: top;
+    }
+}
