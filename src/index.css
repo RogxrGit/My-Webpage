@@ -1,12 +1,14 @@
 :root {
     --primary: #fff;
     --secondary: #9f9f9f;
+    --bordas: #e0e0e0;
+    --light: #fab1a0;
 }
 
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -29,6 +31,21 @@
     flex-direction: row;
 }
 
+.button {
+    display: grid;
+    grid-template-columns: 1fr 4fr 0.5fr;
+
+    align-items: center;
+
+    width: 80%;
+
+    padding: 14px;
+    margin: 14px;
+
+    border: 1px solid var(--bordas);
+    border-radius: 14px;
+}
+
 
 
 
@@ -39,6 +56,8 @@
     #view {
         height: 100dvh;
         width: 100dvw;
+
+        /* Header */
 
         && header {
             align-items: center;
@@ -52,12 +71,12 @@
             top: -100px;
             z-index: -1;
 
-            background-color: pink;
+            background-color: var(--light);
 
             border-radius: 100%;
         }
 
-        header #profile-pic {
+        && header #profile-pic {
             width: 100px;
             height: 100px;
 
@@ -71,19 +90,50 @@
             box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(111, 0, 255, 0.25) 0px 50px 100px -20px, rgb(49, 0, 88) 0px 0px 60px -30px;
         }  
 
-        header #title {
+        && header #title {
             margin: 8px;
+            margin-top: 4dvh;
             padding: 4px;
 
         }
 
-        header #description {
+        && header #description {
             color: var(--secondary);
 
             width: 80%;
 
             text-align: center;
         }
-    
+
+        /* Main */
+        && main {
+            justify-content: center;
+            align-items: center;
+        }
+
+        && main #buttons {
+            margin-top: 8dvw;
+
+            align-items: center;
+        }
+
+        && main .button:hover {
+            cursor: pointer;
+            border: 1.5px solid var(--light);
+            transition: border 0.3s ease-in;
+        }
+
+        && main #buttons img {
+            width: 50px;
+            height: 50px;
+        }
+
+        && main #buttons h3 {
+            margin: 14px;
+        }
+
+        &&  main #buttons i {
+            font-size: 1.3rem;
+        }
     }
 }
