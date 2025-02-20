@@ -2,7 +2,7 @@
     --primary: #fff;
     --secondary: #9f9f9f;
     --bordas: #e0e0e0;
-    --light: #fab1a0;
+    --light: #cd84f1;
 }
 
 * {
@@ -71,7 +71,9 @@
             top: -100px;
             z-index: -1;
 
-            background-color: var(--light);
+            background-image: url("./img/cover.jpg");
+            background-size: cover;
+            background-position: center;
 
             border-radius: 100%;
         }
@@ -85,7 +87,8 @@
             border-radius: 100%;
     
             background-image: url("./img/pic.jpeg");
-            background-position: top;
+            background-size: cover;
+            background-position: center;
 
             box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(111, 0, 255, 0.25) 0px 50px 100px -20px, rgb(49, 0, 88) 0px 0px 60px -30px;
         }  
@@ -134,6 +137,20 @@
 
         &&  main #buttons i {
             font-size: 1.3rem;
+        }
+
+
+
+        /* Footer */
+        && footer {
+            margin: 8px;
+            padding: 8px;
+            
+            font-size: 12px;
+            text-align: center;
+
+            color: var(--secondary);
+            
         }
     }
 }
